@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_marginTop="150dp"
+        android:text="@string/seemore"
+        android:backgroundTint="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Button>
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:background="@drawable/img"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </ImageView>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:textSize="20dp"
+        android:text="Aslo from Facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <ImageView
+        android:background="@drawable/img_2"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content">
+
+    </ImageView>
+</LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:background="@drawable/img_1"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ImageView>
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:textSize="20dp"
+            android:text="Help and Support"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <ImageView
+            android:background="@drawable/img_2"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="50dp"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+    </LinearLayout>
+
+
+
+</LinearLayout>
