@@ -1,241 +1,242 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/colorDarkBlue">
 
-    <Button
-        android:layout_marginTop="150dp"
-        android:text="@string/seemore"
-        android:backgroundTint="@color/gray"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </Button>
-<LinearLayout
-    android:orientation="horizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
     <ImageView
-        android:background="@drawable/img"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="30dp"
+        android:id="@+id/iv_app"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </ImageView>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="365dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_bg_title_1" />
+
+    <ImageView
+        android:id="@+id/iv_circle"
+        android:layout_width="320dp"
+        android:layout_height="330dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_circle_blank" />
+
+    <ImageView
+        android:id="@+id/iv_bo_cap"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginBottom="140dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/tv_tam"
+        app:layout_constraintCircle="@id/tv_tam"
+        app:layout_constraintCircleAngle="0"
+        app:layout_constraintCircleRadius="130dp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_circle"
+        app:srcCompat="@drawable/ic_bocap" />
+
+    <ImageView
+        android:id="@+id/iv_thien_binh"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_tam"
+        app:layout_constraintCircle="@id/tv_tam"
+        app:layout_constraintCircleAngle="30"
+        app:layout_constraintCircleRadius="130dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_tam"
+        app:srcCompat="@drawable/ic_thien_binh" />
+
+    <ImageView
+        android:id="@+id/iv_song_ngu"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_tam"
+        app:layout_constraintCircle="@id/tv_tam"
+        app:layout_constraintCircleAngle="60"
+        app:layout_constraintCircleRadius="130dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_tam"
+        app:srcCompat="@drawable/ic_song_ngu" />
+
+    <ImageView
+        android:id="@+id/iv_ma_ket"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_tam"
+        app:layout_constraintCircle="@id/tv_tam"
+        app:layout_constraintCircleAngle="90"
+        app:layout_constraintCircleRadius="130dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_tam"
+        app:srcCompat="@drawable/ic_ma_ket" />
+
+    <ImageView
+        android:id="@+id/iv_bao_binh"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintCircle="@id/tv_tam"
+        app:layout_constraintCircleAngle="120"
+        app:layout_constraintCircleRadius="130dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_tam"
+        app:layout_constraintTop_toTopOf="@+id/tv_tam"
+        app:srcCompat="@drawable/ic_bao_binh" />
+
+    <ImageView
+        android:id="@+id/iv_cu_giai"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintCircle="@id/tv_tam"
+        app:layout_constraintCircleAngle="150"
+        app:layout_constraintCircleRadius="130dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_tam"
+        app:layout_constraintTop_toTopOf="@+id/tv_tam"
+        app:srcCompat="@drawable/ic_cu_giai" />
+
+    <ImageView
+        android:id="@+id/iv_xu_nu"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintCircle="@id/tv_tam"
+        app:layout_constraintCircleAngle="180"
+        app:layout_constraintCircleRadius="130dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_tam"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tam"
+        app:srcCompat="@drawable/ic_xu_nu" />
+
+    <ImageView
+        android:id="@+id/iv_nhan_ma"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintCircle="@id/tv_tam"
+        app:layout_constraintCircleAngle="210"
+        app:layout_constraintCircleRadius="130dp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_tam"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tam"
+        app:srcCompat="@drawable/ic_nhan_ma" />
+
+    <ImageView
+        android:id="@+id/iv_su_tu"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintCircle="@id/tv_tam"
+        app:layout_constraintCircleAngle="240"
+        app:layout_constraintCircleRadius="130dp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_tam"
+        app:layout_constraintTop_toTopOf="@+id/tv_tam"
+        app:srcCompat="@drawable/ic_su_tu" />
+
+    <ImageView
+        android:id="@+id/iv_kim_nguu"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintCircle="@id/tv_tam"
+        app:layout_constraintCircleAngle="270"
+        app:layout_constraintCircleRadius="130dp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_tam"
+        app:layout_constraintTop_toTopOf="@+id/tv_tam"
+        app:srcCompat="@drawable/ic_kim_nguu" />
+
+    <ImageView
+        android:id="@+id/iv_song_tu"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_tam"
+        app:layout_constraintCircle="@id/tv_tam"
+        app:layout_constraintCircleAngle="300"
+        app:layout_constraintCircleRadius="130dp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_tam"
+        app:srcCompat="@drawable/ic_song_tu" />
+
+    <ImageView
+        android:id="@+id/iv_bach_duong"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/tv_tam"
+        app:layout_constraintCircle="@id/tv_tam"
+        app:layout_constraintCircleAngle="330"
+        app:layout_constraintCircleRadius="130dp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_tam"
+        app:srcCompat="@drawable/ic_bach_duong" />
 
     <TextView
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        android:textSize="20dp"
-        android:text="Aslo from Facebook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:id="@+id/tv_detail"
+        android:layout_width="331dp"
+        android:layout_height="195dp"
+        android:background="@drawable/menu_detail_bg"
+        android:ellipsize="end"
+        android:lines="6"
+        android:paddingStart="30dp"
+        android:paddingTop="40dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="50dp"
+        android:text="cung bọ cạp"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_app" />
 
-    </TextView>
     <ImageView
-        android:background="@drawable/img_2"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="50dp"
-        android:layout_width="20dp"
-        android:layout_height="wrap_content">
-
-    </ImageView>
-</LinearLayout>
-    <View
-        android:background="@color/black"
-        android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
-        android:layout_height="1dp">
-
-    </View>
-
-    <LinearLayout
-        android:orientation="horizontal"
+        android:id="@+id/iv_detail"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:background="@drawable/img_1"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="30dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </ImageView>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="440dp"
+        android:background="@drawable/ic_bocap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="30dp"
-            android:textSize="20dp"
-            android:text="Help and Support"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-        </TextView>
-        <ImageView
-            android:background="@drawable/img_2"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="80dp"
-            android:layout_width="20dp"
-            android:layout_height="wrap_content">
-
-        </ImageView>
-    </LinearLayout>
-
-    <View
-        android:background="@color/black"
-        android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
-        android:layout_height="1dp">
-
-    </View>
-    <LinearLayout
-        android:orientation="horizontal"
+    <TextView
+        android:id="@+id/tv_title_detail"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:background="@drawable/img_1"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="30dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </ImageView>
-
-        <TextView
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="30dp"
-            android:textSize="20dp"
-            android:text="Dark Mode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-        </TextView>
-        <ImageView
-            android:background="@drawable/img_2"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="140dp"
-            android:layout_width="20dp"
-            android:layout_height="wrap_content">
-        </ImageView>
-
-    </LinearLayout>
-
-    <View
-        android:background="@color/black"
-        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_height="1dp">
+        android:fontFamily="@font/roboto_bold"
+        android:text="Cung bọ cạp"
+        android:textColor="@color/colorYellow"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_detail"
+        app:layout_constraintStart_toStartOf="@+id/tv_detail"
+        app:layout_constraintTop_toBottomOf="@+id/iv_app" />
 
-    </View>
-
-    <LinearLayout
-        android:orientation="horizontal"
+    <TextView
+        android:id="@+id/tv_xem_them"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:background="@drawable/img_1"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="30dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </ImageView>
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/tv_xem_them_bg"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="Xem thêm"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_detail"
+        app:layout_constraintStart_toStartOf="@+id/tv_detail" />
 
-        <TextView
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="30dp"
-            android:textSize="20dp"
-            android:text="Change Password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_tam"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:background="@color/colorYellow"
+        android:text=""
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_circle"
+        app:layout_constraintEnd_toEndOf="@+id/iv_circle"
+        app:layout_constraintStart_toStartOf="@+id/iv_circle"
+        app:layout_constraintTop_toTopOf="@+id/iv_circle" />
 
-        </TextView>
-        <ImageView
-            android:background="@drawable/img_2"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="75dp"
-            android:layout_width="20dp"
-            android:layout_height="wrap_content">
-        </ImageView>
-
-    </LinearLayout>
-
-    <View
-        android:background="@color/black"
-        android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
-        android:layout_height="1dp">
-
-    </View>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:background="@drawable/img_1"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="30dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </ImageView>
-
-        <TextView
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="30dp"
-            android:textSize="20dp"
-            android:text="Logout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-        </TextView>
-    </LinearLayout>
-
-    <View
-        android:background="@color/black"
-        android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
-        android:layout_height="1dp">
-
-    </View>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <FrameLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_gravity="center"
-                android:src="@drawable/img_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_gravity="center"
-                android:src="@drawable/img_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </FrameLayout>
-        <FrameLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_gravity="center"
-                android:src="@drawable/img_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </FrameLayout>
-    </LinearLayout>
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
