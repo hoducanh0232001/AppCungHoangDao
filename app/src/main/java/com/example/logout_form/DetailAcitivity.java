@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 import org.w3c.dom.Text;
 
 public class DetailAcitivity extends BaseActivity{
-    private TextView textView2 , textViewDetail, textViewDescription;
+    private TextView textViewBack , textViewDetail, textViewDescription;
     ImageView imageViewDetail ;
     @Override
     protected int getLayoutID() {
@@ -29,28 +29,31 @@ public class DetailAcitivity extends BaseActivity{
         finish();
     }
 
+    Story str;
     @Override
     protected void initView() {
 
-        Intent intent = getIntent();
        // String a = intent.getStringExtra("hoducanh"); // lấy dữ liệu từ key bên main
         Bundle bundle = getIntent().getExtras(); // gói dữ liệu thay cho intent
-       String idItextViewDescription = bundle.getString("key_1"); //nhận dữ liệu từ key bên main
+        str = (Story) bundle.getSerializable("Story");  // lấy key từ main
+
+     //  String idItextViewDescription = bundle.getString("key_1"); //nhận dữ liệu từ key bên main
        // Log.i(TAG, idIvDetail + "");
-         String idtextViewDetail = bundle.getString("key_2");
-         int idimageViewDetail = bundle.getInt("key_3");
+     //    String idtextViewDetail = bundle.getString("key_2");
+    //     int idimageViewDetail = bundle.getInt("key_3");
       //  Toast.makeText(this, ""+a, Toast.LENGTH_SHORT).show();
         //Log.i("hoducanh", "initView: "+a);
-        textViewDetail = (TextView) findViewById(R.id.tv_title_detail_m002);
+
+       textViewDetail = (TextView) findViewById(R.id.tv_title_detail_m002);
         textViewDescription = (TextView) findViewById(R.id.tv_detail_m002);
         imageViewDetail = (ImageView) findViewById(R.id.iv_detail_m002);
 
-        textViewDescription.setText(idItextViewDescription); // key_1
-        textViewDetail.setText(idtextViewDetail);     //key_2
-        imageViewDetail.setBackgroundResource(idimageViewDetail);   //key_3
+        textViewDescription.setText(str.getTextViewDetail());
+        textViewDetail.setText(str.getTextViewTitleDetail());
+        imageViewDetail.setImageResource(str.getTemp());
 
-        textView2 = (TextView) findViewById(R.id.tv_quay_lai);
-        textView2.setOnClickListener(new View.OnClickListener() {
+        textViewBack = (TextView) findViewById(R.id.tv_quay_lai);
+        textViewBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 gobackMainAct();
