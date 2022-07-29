@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorDarkBlue">
@@ -90,8 +91,8 @@
 
     <ImageView
         android:id="@+id/iv_cu_giai"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="79dp"
+        android:layout_height="77dp"
         android:scaleType="fitCenter"
         app:layout_constraintCircle="@id/tv_tam"
         app:layout_constraintCircleAngle="150"
@@ -174,16 +175,17 @@
 
     <TextView
         android:id="@+id/tv_detail"
-        android:layout_width="331dp"
-        android:layout_height="195dp"
+        android:layout_width="319dp"
+        android:layout_height="198dp"
         android:background="@drawable/menu_detail_bg"
+
         android:ellipsize="end"
         android:lines="6"
         android:paddingStart="30dp"
-        android:paddingTop="40dp"
+        android:paddingTop="50dp"
         android:paddingEnd="20dp"
         android:paddingBottom="50dp"
-        android:text="cung bọ cạp"
+        android:text="@string/bo_cap_text"
         android:textColor="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -204,12 +206,13 @@
         android:id="@+id/tv_title_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="Cung bọ cạp"
+        android:text="@string/bo_cap_title1"
         android:textColor="@color/colorYellow"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="@+id/tv_detail"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="@+id/tv_detail"
         app:layout_constraintTop_toBottomOf="@+id/iv_app" />
 

@@ -28,9 +28,8 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         return super.findViewById(id);
     }
 
-    protected View.OnClickListener initView() {
+    protected void initView() {
         //do nothing
-        return null;
     }
 
     protected abstract int getLayoutID();

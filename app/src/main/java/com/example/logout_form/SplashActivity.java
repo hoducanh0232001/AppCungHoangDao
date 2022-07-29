@@ -11,7 +11,7 @@ public class SplashActivity extends BaseActivity {
     }
     // ánh xạ hành động thực hiện trong activity
     @Override
-    protected View.OnClickListener initView() { //delay để chuyển từ splash sang main activity
+    protected void initView() { //delay để chuyển từ splash sang main activity
         new Handler().postDelayed(new Runnable() {     //xét độ delay (đơn vị ms)
             @Override
             public void run() {
@@ -19,7 +19,6 @@ public class SplashActivity extends BaseActivity {
             }
         },5000);
 
-        return null;
     }
 
     private void gotoMainAct() {
